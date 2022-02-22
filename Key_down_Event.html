@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Events</title>
+    <style>
+         #box{
+            height: 100px;
+            width:100px;
+            background-color: red;
+        }
+    </style>
+    </head>
+<body>
+    <div id="box"></div>
+    <script>
+        window.addEventListener("keydown",checkKey);
+        function checkKey(checking){
+            console.log(checking.key);           
+        }
+
+    </script>
+
+</body>
+
+</html>

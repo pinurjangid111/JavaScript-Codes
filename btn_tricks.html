@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>JavaScript</title>
+  <!-- <script src="D:\Nodejspractise\strict_mode.js"></script> -->
+<style>
+    .color
+    {
+        background-color:yellow;
+        color:red;
+    }
+    .dim
+    { 
+        border:1px solid red;
+        padding:50px;
+    }
+</style>
+  <body>
+      <!-- <button id="btn" onclick="btnClick()">CLick me !! </button> // (inline method) -->
+      <button id="btn">CLick me !! </button>
+      <div id="box" class="color dim">
+          <p>This is Dummy Text</p>
+      </div>
+    <script>
+        // function btnClick(){
+        //     alert("Button was clicked.");   
+        // }   
+         
+        let btn=document.getElementById("btn");
+        btn.addEventListener("click",function(){
+            console.log("Button was Clicked !!");
+        });
+        btn.addEventListener("mouseover",function(){
+            console.log("Mouse Over activated");
+        });
+        btn.addEventListener("mouseout",function(){
+            console.log("Mouse OUT is activated");
+        });
+        // btn.addEventListener("click", btnClick);
+   </script>
+  </body>
+  <head>
+  </html> 

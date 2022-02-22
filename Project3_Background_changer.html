@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<HTML lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Background Changer</title>    
+        <style>
+           body{
+               margin:0px;
+               padding:20px 100px;
+           }
+
+           h1{
+               text-align:center;
+               text-decoration: underline;
+           }
+           img{
+               width:  100%;
+               height: auto;
+               margin: 0 auto;
+           }
+           .btn{
+               
+               width:20px;
+               height:20px;
+               display:inline-block;
+               border: solid grey 2px;
+               border-radius: 50%;
+           }
+           #red{
+               background-color: #ff0000;
+           }
+           #green{
+               background-color: #008000;
+           }
+           #yellow{ 
+               background-color: #ffff00;
+            }
+            #cyan{ 
+                background-color:#00ffff;
+            }
+            #purple{ 
+                background-color:#800080;
+            }
+            #grey{ 
+                background-color:#808080;
+            }
+            #violet{ 
+                background-color:#ee82ee;
+            }
+            #pink{
+                background-color:#ffc0cb;  
+            }
+            #white{
+                background-color:#ffffff;
+            }
+            #black{
+                background-color:#000000;
+            }
+            
+            #color-switcher{
+                text-align:right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="color-switcher">
+            <span id="red"      class="btn"  onclick="changeBG('#ff0000 ')"></span>
+            <span id="green"    class="btn"  onclick="changeBG('#008000')"></span>
+            <span id="yellow"   class="btn"  onclick="changeBG('#ffff00')"></span>
+            <span id="cyan"     class="btn"  onclick="changeBG('#00ffff')"></span>
+            <span id="purple"   class="btn"  onclick="changeBG('#800080')"></span>
+            <span id="grey"     class="btn"  onclick="changeBG('#808080')"></span>
+            <span id="violet"   class="btn"  onclick="changeBG('#ee82ee')"></span>
+            <span id="pink"     class="btn"  onclick="changeBG('#ffc0cb')"></span>
+            <span id="white"     class="btn"  onclick="changeBG('#ffffff')"></span>
+            <span id="black"     class="btn"  onclick="changeBG('#000000')"></span>
+
+        </div>
+        <h1 class="text">GRAPHIC ERA HILL UNIVERSITY</h1>
+        <!-- <img src="D:\Nodejspractise\empimage.jpg"> -->
+        <img src="https://www.susangreenecopywriter.com/wp-content/uploads/2013/01/iStock_000039291924_Medium.jpg">
+        <p class="text">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eos quos inventore quo neque? Magni voluptatum, quasi dicta incidunt fugiat molestiae impedit vero reprehenderit accusamus magnam minima aliquam eveniet veniam.
+At ut explicabo deleniti ducimus nobis temporibus voluptatem quos mollitia alias earum eveniet debitis dolore aliquid ad unde dolorem porro, odit, minus reprehenderit cumque voluptatibus asperiores deserunt assumenda. Provident, enim?
+Unde accusamus velit fugit, quis saepe delectus sunt aperiam fuga, nostrum, temporibus exercitationem consequatur. Recusandae fugit, fugiat, non cupiditate nobis iure quia nesciunt voluptatem, earum provident velit sapiente omnis totam?
+Molestias deleniti quibusdam accusamus laborum sint minima quam veniam exercitationem quia tempore, neque maiores autem non pariatur nulla, repudiandae sit qui praesentium, eos officiis quidem impedit culpa nobis. Consectetur, sunt.
+Quos, recusandae hic. Voluptate vitae iste sequi, beatae sapiente sunt. Vero, a? Corrupti provident esse error dolore laudantium quidem rerum odit blanditiis nam natus! Eius ab magni ipsum laboriosam reprehenderit?
+Saepe doloribus modi repudiandae eius impedit deserunt facere. Suscipit nostrum impedit debitis error, ea facere voluptatem expedita excepturi et sit explicabo vero quibusdam, sapiente, itaque maxime doloremque. Cumque, quod vel.
+Ratione minus hic aliquid consequatur in quos obcaecati qui at fugiat? Atque rem similique adipisci asperiores laboriosam laborum reprehenderit accusantium quod molestias? Praesentium porro iste architecto cupiditate repellendus incidunt tenetur?
+Blanditiis accusamus neque vel natus praesentium, recusandae asperiores aliquid porro cupiditate velit iure doloribus labore reprehenderit ipsam magni tenetur commodi iste amet suscipit laboriosam doloremque, nobis voluptatem debitis autem. Libero.
+Voluptatum laudantium architecto quis odit, fugiat in voluptas iure dolorem officiis enim incidunt illo suscipit! Iure tenetur doloribus nam ullam vero possimus dolores neque sed omnis laudantium, aspernatur officiis a.
+Expedita, quod rem natus hic sit, porro quis enim nulla debitis delectus temporibus commodi, quo veniam tempore ea quidem architecto dolore sed maiores magni. Debitis, doloribus. Dignissimos sequi iste quibusdam!
+        </p>
+        <script>
+            function changeBG(color){
+                document.body.style.backgroundColor=color;
+                let txt=document.getElementsByClassName("text");
+                if(color=="#000000"){
+                    for(let elm of txt){
+                        elm.style.color="#ffffff";
+                    }
+                }else{
+                    for(let elm of txt){
+                        elm.style.color="#000000 ";
+                    }
+                }
+            }
+        </script>
+    </body>
+</HTML>

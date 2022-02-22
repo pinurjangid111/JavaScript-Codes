@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubbling and Event Capturing</title>
+    <style>
+        body{
+            padding: 400px;
+            background-color: crimson;
+        }
+        #boxy{
+            padding: 50px;
+            background-color:yellow;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="boxy">
+        <button id="btn">Click me SIR.</button>
+    </div>
+    <script>
+// (document.getElementById('btn')).addEventListener("click",function(){console.log("Button clicked...")},true);
+// (document.getElementById('boxy')).addEventListener("click",function(){console.log("Div-CLicked...")},true);
+// document.body.addEventListener("click",function(){console.log("Body Clicked...")},true);    
+
+(document.getElementById('btn')).addEventListener("click",function(stopcall){console.log("Button clicked...");stopcall.stopPropagation();});
+(document.getElementById('boxy')).addEventListener("click",function(stopcall){console.log("Div-CLicked...");stopcall.stopPropagation();});
+document.body.addEventListener("click",function(){console.log("Body Clicked...")});    
+    </script>
+      </body>
+      </html>

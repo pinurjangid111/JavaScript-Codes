@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>JavaScript</title>
+  <!-- <script src="D:\Nodejspractise\strict_mode.js"></script> -->
+
+  <body>
+      <ul id="list">
+          <li>List 1</li>
+          <li>List 2</li>
+          <li>List 3</li>
+          <li>List 4</li>
+      </ul>
+      <script>
+            let parent=document.body;
+            let elm=document.createElement("h1");
+            elm.textContent="Before parent.";
+
+            let list=document.getElementById('list');
+            parent.insertBefore(elm,list);
+
+
+        //   let listnew=document.getElementById("list");
+        //   let item= document.createElement("li");
+        //   item.textContent="New List is 5";
+        //     let pos= listnew.firstElementChild.nextElementSibling.nextElementSibling;
+        //     listnew.insertBefore(item,pos);
+
+        
+          //   listnew.appendChild(item);
+
+</script>
+  </body>
+  <head>
+  </html> 

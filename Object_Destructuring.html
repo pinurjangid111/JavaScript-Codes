@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop new</title> 
+        <style>
+
+        </style>   
+    </head>
+    <body><h1>For Loop new</h1>
+<script>
+   let book={
+       name:"Advance js",   
+       piece:"150",
+       page:2000,
+       movies:{
+           movie1:"spiderman",
+           movie2:"superman",
+           movie3:"batman"
+       }
+   };
+   let{name:title,page,movies:{movie1:tom,movie2:clark,movie3:bruce}}=book;
+   document.write(`${title} ,${page}, ${tom}, ${clark}, ${bruce}`); 
+
+</script>
+    </body>
+    </html>

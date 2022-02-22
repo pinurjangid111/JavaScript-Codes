@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stopwatch</title>
+        <style>
+            body{
+                background-color:black;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height: 95vh;
+            }
+            #container{
+                color:#15f4ee;
+            }
+            .digit{
+                font-size:150px;
+                font-weight:bold;
+            }
+            .txt{
+                font-size:40px;
+                font-weight:bold;
+                color:red;
+                
+            }
+            #btn-container{
+                text-align: center;
+                margin-top: 20px;
+                
+               
+            }
+            .btn{
+                margin:12px;
+                background-color:black;
+                position:center;
+                text-align: center;
+                height: 60px;
+                width: 200px;
+                padding:10px 10px;
+                font-weight:bold;
+                font-size: 25px;
+                color:#15f4ee;  /*botton color */
+                font-family: poppins;
+                border:5px solid #15f4ee;
+                text-transform: uppercase;
+                border-radius: 20px;
+                letter-spacing:7px;
+                cursor: pointer;
+                transition:0.5s;
+                margin-top:20px;
+            }
+            .btn:hover{
+                box-shadow:0 5px 40px 0px #15f4ee inset, 0 5px 40px 0px #15f4ee,
+                0 5px 40px 0px #15f4ee inset,0 5px 40px 00px #15f4ee;
+            }
+           
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="time">
+                <span class="digit" id="hr">00</span>
+                <span class="txt">Hr</span>
+                <span class="digit" id="min">00</span>
+                <span class="txt">Min</span>
+                <span class="digit" id="sec">00</span>
+                <span class="txt">Sec</span>
+                <span class="digit" id="count">00</span>
+               
+            </div>
+            <div id="btn-container">
+                <button class="btn" id="start" onclick="start()">Start</button>
+                <button class="btn" id="stop" onclick="stop()">Stop</button>
+                <button class="btn" id="reset" onclick="reset()">Reset</button>
+            </div>
+        </div>
+         
+        <script>
+            var hr=0;
+            var min=0;
+            var sec=0;
+            var count=0;
+            var timer=false;
+                function start() {
+                    timer=true;
+                    stopwatch();
+                }
+                
+                function stop() {
+                    timer=false;
+                }
+
+                function reset() {
+                    timer:false;
+                    hr=0;
+                    sec=0;
+                    min=0;
+                    count=0;
+
+                    document.getElementById("hr").innerHTML="00";
+                    document.getElementById("sec").innerHTML="00";
+                    document.getElementById("min").innerHTML="00";
+                    document.getElementById("count").innerHTML="00";
+                }
+
+                function stopwatch(){
+                    if(timer == true){
+                        count=count+1;
+                    
+                    if(count == 100){
+                        sec=sec+1;
+                        count=0;
+                    }
+
+                    if(sec == 60){
+                        min=min+1;
+                        sec=0;
+                        count=0;
+                    }
+                    if(min == 60){
+                        hr=hr+1;
+                        min=0
+                        sec=0;
+                        count=0;
+                    }   
+                    var hrnew=hr;
+                    var minnew=min;
+                    var secnew=sec;
+                    var countnew=count;
+
+                    if(hr<10){
+                        hrnew="0"+hrnew;
+                    }
+
+                    if(min<10){
+                        minnew="0"+minnew;
+                    }
+
+                    if(sec<10){
+                        secnew="0"+secnew;
+                    }
+
+                    if(count<10){
+                        countnew="0"+countnew;
+                    }
+
+                        document.getElementById("hr").innerHTML=hrnew;
+                        document.getElementById("min").innerHTML=minnew;
+                        document.getElementById("sec").innerHTML=secnew;
+                        document.getElementById("count").innerHTML=countnew;
+                        setTimeout("stopwatch()",10);  
+                    }
+                }
+
+
+        </script>
+    
+
+</body>
+</html>

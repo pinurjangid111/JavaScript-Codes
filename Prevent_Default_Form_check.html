@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prevent Default</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+       
+        <form action="" id="form">
+            <input type="text">
+            <input type="submit">
+
+        </form>
+
+        <script>
+            
+document.getElementById('form').addEventListener('submit', function(stopevent)
+{
+    console.log("Submit successfull..");
+    stopevent.preventDefault();
+});
+
+       </script>
+    </body>
+</html>

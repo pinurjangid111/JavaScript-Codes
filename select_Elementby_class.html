@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>JavaScript</title>
+  <!-- <script src="D:\Nodejspractise\strict_mode.js"></script> -->
+
+  <body>
+    <ul>
+      <li id="first">List 1 </li>  
+      <li class="cl">List 2</li>     
+      <li class="cl">List 3</li>
+    </ul> 
+    <script>
+
+        let elm=document.getElementsByClassName("cl");  
+        for(let i=0;i<elm.length;i++)
+        {
+            elm[i].innerHTML="Welcome to Advance Java Script";
+        }
+        let frs=document.getElementById("first"); 
+        frs.innerHTML="Listing Elements ";
+        
+
+    </script>
+  </body>
+  <head>
+  </html>

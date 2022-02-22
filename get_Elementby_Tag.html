@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>JavaScript</title>
+  <!-- <script src="D:\Nodejspractise\strict_mode.js"></script> -->
+
+  <body>
+      <h1>Heading One</h1>
+      <div id="div1">
+      <p>The Moon is a barren, rocky world without air and water. </p>
+      <h2>Heading Two</h2>
+        <p>It has dark lava plain on its surface.</p>
+        <h2>Heading Three</h2>
+        <p> The Moon is filled wit craters.</p>
+</div>
+      
+    <script>
+    //   let div1=document.getElementById("div1");
+
+      let elm=div1.getElementsByTagName("p");
+      for(let i=0;i<elm.length;i++){
+          elm[i].innerHTML=" changed of H2";
+      }
+    </script>
+  </body>
+  <head>
+  </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>JavaScript</title>
+  <!-- <script src="D:\Nodejspractise\strict_mode.js"></script> -->
+
+  <body>
+        <h1>Code Practise</h1>
+        <ul id="intro">
+            <li> Code 1</li>
+            <li>Code 2</li>
+            <li>Code 3</li>
+            <li>Code 4</li>
+        </ul>
+        <ul>
+            <li>Part 1</li>
+            <li>Part 2</li>
+            <li>Part 3</li>
+            <li>Part 4</li>
+        </ul>
+      
+    <script>
+
+      let elm = document.getElementById('intro');
+      let prt = elm.parentElement;
+      prt.innerHTML = "New Changes";
+        console.log(prt);
+
+
+    //   for(let i=0;i<elm.length;i++){
+    //     elm[i].innerHTML="query selector changes ";
+    //   }
+
+    </script>
+  </body>
+  <head>
+  </html> 

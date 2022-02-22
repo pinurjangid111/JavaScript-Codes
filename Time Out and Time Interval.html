@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Time OUT</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <button id="btn" >Clear interval</button>
+       <script>
+           var t1 =setInterval(function(){console.log('Please Subscribe....');},3000);
+        //    function func(){
+        //        console.log("Please Subscribe....");
+        //     };
+            document.getElementById("btn").addEventListener("click",function(){clearInterval(t1);});
+
+
+
+            
+        //    let timeoutid=setTimeout(timeout,3000);
+        //    function timeout(){ 
+        //     alert("Please subscribe my channel");
+        //    };
+        //    clearTimeout(timeoutid);
+       </script>
+    </body>
+</html>
